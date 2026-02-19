@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>1v1.lol</title>
-<style>
-    body {
-        margin: 0;
-        overflow: hidden;
-        background: black;
-    }
-    iframe {
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
-    .back {
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        background: white;
-        padding: 10px 15px;
-        border-radius: 8px;
-        font-family: Arial;
-        cursor: pointer;
-        z-index: 9999;
-        box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-</style>
+    <meta charset="UTF-8">
+    <title>1v1.lol</title>
+    <style>
+        body {
+            margin: 0;
+            background: #000814;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .topbar {
+            width: 100%;
+            padding: 15px;
+            background: #0a0f1f;
+            border-bottom: 2px solid #0066ff;
+            text-align: center;
+        }
+
+        .back-btn {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: 2px solid #0066ff;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            border-color: #ff1e1e;
+            box-shadow: 0 0 10px #ff1e1e;
+        }
+
+        iframe {
+            width: 100%;
+            height: calc(100vh - 70px);
+            border: none;
+        }
+    </style>
 </head>
 <body>
 
-<div class="back" onclick="location.href='index.html'">⬅ Volver al menú</div>
+    <div class="topbar">
+        <a class="back-btn" href="index.html">⬅ Volver al menú</a>
+    </div>
 
-<iframe src="https://1v1.lol"></iframe>
+    <iframe src="https://ubg98.github.io/1v1-lol/" allowfullscreen></iframe>
 
 </body>
 </html>
