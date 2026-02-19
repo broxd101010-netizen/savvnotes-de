@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú de Juegos</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #000814;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Pantalla de carga */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .glitch {
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            animation: glitch 1s infinite;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px red; }
+            50% { text-shadow: -2px -2px blue; }
+            100% { text-shadow: 2px -2px red; }
+        }
+
+        #tip {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #00aaff;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 45px;
+            color: #ff1e1e;
+            text-shadow: 0 0 10px #0066ff;
+        }
+
+        h2 {
+            margin-left: 40px;
+            margin-top: 50px;
+            color: #00aaff;
+            text-shadow: 0 0 5px #ff1e1e;
+        }
+
+        .menu {
+            width: 90%;
+            margin: auto;
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .btn {
+            background: #0a0f1f;
+            border: 2px solid #0066ff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            border-color: #ff1e1e;
+            box-shadow: 0 0 10px #ff1e1e;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Pantalla de carga -->
+    <div id="loader">
+        <div class="glitch">Cargando...</div>
+        <div id="tip">Consejo rápido: ...</div>
+    </div>
+
+    <h1>MENÚ DE JUEGOS</h1>
+
+    <!-- TERROR -->
+    <h2>Terror</h2>
+    <div class="menu">
+        <a class="btn" href="granny1.html">Granny 1</a>
+        <a class="btn" href="granny2.html">Granny 2</a>
+        <a class="btn" href="poppy.html">Poppy Playtime</a>
+
+        <!-- FNAF 1–4 -->
+        <a class="btn" href="fnaf1.html">FNAF 1</a>
+        <a class="btn" href="fnaf2.html">FNAF 2</a>
+        <a class="btn" href="fnaf3.html">FNAF 3</a>
+        <a class="btn" href="fnaf4.html">FNAF 4</a>
+    </div>
+
+    <!-- PARKOUR / PLATAFORMAS -->
+    <h2>Parkour / Plataformas</h2>
+    <div class="menu">
+        <a class="btn" href="slope.html">Slope</a>
+        <a class="btn" href="run3.html">Run 3</a>
+        <a class="btn" href="stickman.html">Stickman Hook</a>
+        <a class="btn" href="fireboy.html">Fireboy & Watergirl</a>
+    </div>
+
+    <!-- SHOOTER / PVP -->
+    <h2>Shooter / PvP</h2>
+    <div class="menu">
+        <a class="btn" href="1v1.html">1v1.lol</a>
+        <a class="btn" href="shell.html">Shell Shockers</a>
+        <a class="btn" href="krunker.html">Krunker</a>
+    </div>
+
+    <!-- IO GAMES -->
+    <h2>IO Games / Multiplayer</h2>
+    <div class="menu">
+        <a class="btn" href="paperio.html">Paper.io</a>
+        <a class="btn" href="holeio.html">Hole.io</a>
+        <a class="btn" href="agar.html">Agar.io</a>
+    </div>
+
+    <!-- SANDBOX -->
+    <h2>Sandbox / Creatividad</h2>
+    <div class="menu">
+        <a class="btn" href="sandbox.html">Sandbox</a>
+        <a class="btn" href="melon.html">Melon Playground Web</a>
+    </div>
+
+    <!-- CARRERAS -->
+    <h2>Carreras</h2>
+    <div class="menu">
+        <a class="btn" href="motopool.html">Moto Pool</a>
+        <a class="btn" href="drift.html">Drift Hunters</a>
+        <a class="btn" href="tunnel.html">Tunnel Rush</a>
+    </div>
+
+    <!-- PUZZLE / RANDOM -->
+    <h2>Puzzle / Random</h2>
+    <div class="menu">
+        <a class="btn" href="geometry.html">Geometry Dash</a>
+        <a class="btn" href="2048.html">2048</a>
+        <a class="btn" href="stack.html">Stack</a>
+    </div>
+
+    <script>
+        const tips = [
+            "Si pierdes, fue lag.",
+            "Si ganas, fue habilidad.",
+            "Nunca recargues en medio de un combate.",
+            "El profe no sabe que estás jugando.",
+            "Si te descubren, di que es un simulador educativo.",
+            "El mouse siempre tiene la culpa.",
+            "Si va lento, es culpa del WiFi.",
+            "No falles el salto, bro.",
+            "Si mueres, estabas probando una estrategia.",
+            "El volumen bajo te hace jugar mejor.",
+            "No te rindas, solo reinicia.",
+            "El botón de correr es tu mejor amigo.",
+            "Nunca confíes en un enemigo quieto.",
+            "Si el juego se traba, respira.",
+            "Tu ping es tu enemigo.",
+            "No juegues con sueño.",
+            "Los pro no culpan al juego… creo.",
+            "Si te caes, fue el teclado.",
+            "Siempre revisa detrás de ti.",
+            "No gastes todas las balas.",
+            "Si te matan, estaban usando hacks.",
+            "El truco es no tener miedo.",
+            "Si te persigue un monstruo, corre.",
+            "No mires atrás.",
+            "El profe está detrás de ti… o no.",
+            "Si el juego se congela, tú no.",
+            "Nunca confíes en un pasillo oscuro.",
+            "Si escuchas pasos, ya valió.",
+            "No abras puertas sospechosas.",
+            "Si el juego dice 'corre', corre."
+        ];
+
+        document.getElementById("tip").innerText =
+            "Consejo rápido: " + tips[Math.floor(Math.random() * tips.length)];
+
+        // Ocultar loader después de 3.5s
+        setTimeout(() => {
+            document.getElementById("loader").style.display = "none";
+        }, 3500);
+    </script>
+
+</body>
+</html>
